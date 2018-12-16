@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import cmocean
 
+#data from USGS NED 1/3 arc-second n41w104 1 x 1 degree ArcGrid 2015 from https://apps.nationalmap.gov/download/#productSearch
 
 geo = gdal.Open('USGS_NED_13_n41w104_IMG.img')
 #upper left corner is N 41 W 104
