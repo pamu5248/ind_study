@@ -14,8 +14,6 @@ import math
 from wind_tools import geometry as geo
 from wind_tools import plotting as wp
 
-%matplotlib inline  
-
 from FieldCampaign import read_data_files as rd
 from FieldCampaign import controlRef as cref
 from FieldCampaign import hector_ref as hr
