@@ -46,7 +46,8 @@ for lis in list_of_binned_lists:
     mean = np.nanmean(lis)
     mean_list.append(mean)
 mean_list = np.array(mean_list)
-
+max_val = np.nanmax(np.abs(mean_list))
+print(max_val)
 
 plt.polar()
 fig = plt.figure(figsize = (20,10))
@@ -65,8 +66,8 @@ ax1.scatter(wd[mean_list <0],np.abs(mean_list[mean_list <0]),alpha = 1,c = 'C1',
 ax1.scatter(wd[mean_list >0],np.abs(mean_list[mean_list >0]),alpha = 1,c = 'C0',s=30, label = 'stable')
 
 
-ax1.fill_between(np.linspace(-80*np.pi/180.,-145*np.pi/180.,100),0,max_val,color = 'gray',alpha = .5,zorder=3)
-ax1.fill_between(np.linspace(-245*np.pi/180.,-270*np.pi/180.,100),0,max_val,color = 'gray',alpha = .5,zorder=3)
+ax1.fill_between(np.linspace(-80*np.pi/180.,-145*np.pi/180.,100),0,.6,color = 'gray',alpha = .5,zorder=3)
+ax1.fill_between(np.linspace(-245*np.pi/180.,-270*np.pi/180.,100),0,.6,color = 'gray',alpha = .5,zorder=3)
 
 
 
@@ -95,8 +96,8 @@ for lis in list_of_binned_lists:
     mean = np.nanmean(lis)
     mean_list.append(mean)
 mean_list = np.array(mean_list)
-    
-
+max_val = np.nanmax(np.abs(mean_list))
+print(max_val)
 
 ax2 = fig.add_subplot(132, projection='polar')
 wd_bins_deg = wd_bins
@@ -133,7 +134,8 @@ for lis in list_of_binned_lists:
     mean = np.nanmean(lis)
     mean_list.append(mean)
 mean_list = np.array(mean_list)
-    
+max_val = np.nanmax(np.abs(mean_list))
+print(max_val)
 
 
 ax3 = fig.add_subplot(133, projection='polar')
